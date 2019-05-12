@@ -21,6 +21,10 @@ class ViewController: UIViewController {
         rollDice()
     }
     
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        rollDice()
+    }
+    
     func rollDice() {
         randomDiceValue1 = Int.random(in: 1...6)
         randomDiceValue2 = Int.random(in: 1...6)
