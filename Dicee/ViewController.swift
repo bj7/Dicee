@@ -18,15 +18,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        rollDice()
     }
-
-    @IBAction func RollButtonClicked(_ sender: Any) {
+    
+    func rollDice() {
         randomDiceValue1 = Int.random(in: 1...6)
         randomDiceValue2 = Int.random(in: 1...6)
-
+        
         print(randomDiceValue1, randomDiceValue2)
         diceImage1.image = UIImage(named: "dice\(randomDiceValue1)")
         diceImage2.image = UIImage(named: "dice\(randomDiceValue2)")
+    }
+
+    @IBAction func RollButtonClicked(_ sender: Any) {
+        rollDice()
     }
 }
 
