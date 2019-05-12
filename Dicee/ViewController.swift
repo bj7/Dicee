@@ -25,6 +25,8 @@ class ViewController: UIViewController {
         randomDiceValue2 = Int.random(in: 1...6)
 
         print(randomDiceValue1, randomDiceValue2)
+        diceImage1.image = UIImage(named: "dice\(randomDiceValue1)")
+        diceImage2.image = UIImage(named: "dice\(randomDiceValue2)")
     }
 }
 
